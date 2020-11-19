@@ -1,4 +1,4 @@
-.header
+.navbar
 	background-color: #ffffff
 	&-top
 		display: flex
@@ -8,6 +8,12 @@
 	&__search
 		margin-right: auto
 		margin-left: 108px
+	&-bottom
+		background-color: $dark
+	&-menu
+		padding: 31px 0px
+.logo
+	width: 177px
 .search
 	display: flex
 	position: relative
@@ -46,3 +52,14 @@
 		line-height: 18px
 		margin-left: 18px
 		color: $tc
+.list
+	display: flex
+	align-items: center
+	justify-content: space-between
+	color: $light
+	&__link
+		font-weight: 700
+		font-size: 14px
+		line-height: 18px
+		color: inherit
+		text-transform: uppercase
