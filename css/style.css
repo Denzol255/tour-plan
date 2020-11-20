@@ -25,6 +25,7 @@ ul li {
 
 body {
   font-family: 'Mulish', sans-serif;
+  background-color: #F5FAFE;
   color: #333333;
 }
 
@@ -499,6 +500,30 @@ template {
   line-height: 18px;
   color: inherit;
   text-transform: uppercase;
+}
+
+.breadcrumb-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 19px 0;
+}
+
+.breadcrumb-list__item {
+  font-size: 10px;
+  line-height: 13px;
+}
+
+.breadcrumb-list__item:not(:last-child)::after {
+  content: "/";
+  margin-right: 4px;
+}
+
+.breadcrumb-list__link {
+  color: inherit;
 }
 
 @media (max-width: 1200px) {
