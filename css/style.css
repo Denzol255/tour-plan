@@ -539,8 +539,18 @@ template {
           align-items: center;
 }
 
+.hotel-info__name {
+  margin: 0;
+  margin-top: 4px;
+  margin-right: 14px;
+}
+
 .hotel-info__offer {
   margin-top: 4px;
+}
+
+.hotel-info__description {
+  margin-top: 5px;
 }
 
 .hotel-wrapper {
@@ -559,9 +569,6 @@ template {
   font-size: 24px;
   line-height: 30px;
   text-transform: uppercase;
-  margin: 0;
-  margin-top: 4px;
-  margin-right: 14px;
 }
 
 .hotel-description {
@@ -669,6 +676,35 @@ template {
     width: 16px;
     height: 1px;
     background-color: #333333;
+  }
+  .hotel-wrapper {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .hotel-info__rating {
+    display: none;
+  }
+  .hotel-info__offer {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin-top: 0;
+  }
+  .hotel-info__text {
+    width: 100%;
+  }
+  .hotel-info__name {
+    margin-right: 0;
+    margin-top: 10px;
+  }
+  .hotel-name {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .stars {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
   }
 }
 
