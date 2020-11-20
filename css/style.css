@@ -386,7 +386,7 @@ template {
 }
 
 .navbar {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 
 .navbar-top {
@@ -556,7 +556,6 @@ template {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    border: none;
     background-color: #FFFFFF;
   }
   .menu-button__line {
