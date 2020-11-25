@@ -1,0 +1,77 @@
+.reviews
+	padding: 40px 0 70px 0
+	&__title
+		font-weight: bold
+		font-size: 36px
+		line-height: 45px
+		text-align: center
+		text-transform: uppercase
+		margin-bottom: 70px
+	&-slider
+		&__item
+			position: relative
+			display: flex
+			flex-direction: column
+			align-items: center
+			background-color: #fff
+			border-radius: 8px
+			margin: 45px auto 0
+			width: 703px
+			padding: 0 62px 30px 62px
+			&::before
+				position: absolute
+				content: url(../img/reviews/quote-left.svg)
+				width: 70px
+				height: 48px
+				top: 13px
+				left: 62px
+			&::after
+				position: absolute
+				content: url(../img/reviews/quote-right.svg)
+				width: 70px
+				height: 48px
+				top: 118px
+				right: 62px
+		&__profile
+			display: flex
+			flex-direction: column
+			align-items: center
+			margin-top: -45px
+			margin-bottom: 32px
+		&__avatar
+			width: 90px
+			height: 90px
+			border-radius: 50%
+			object-fit: cover
+			margin-bottom: 9px
+		&__username
+			font-weight: bold
+			font-size: 12px
+			line-height: 15px
+			color: $bc
+			margin-bottom: 10px
+		&__date
+			font-size: 10px
+			line-height: 13px
+			color: #000000
+			margin-bottom: 4px
+		&__rating
+			display: flex
+			align-items: center
+		&__text
+			max-width: 537px
+			margin: 0 auto
+			font-weight: normal
+			font-size: 12px
+			line-height: 160%
+			text-align: justify
+			color: $tc
+		&__button
+			@include arrow-mixin
+			&--next
+				right: 13px
+				background-image: url(../img/reviews/review-arrow_next.svg)
+			&--prev
+				left: 13px
+				background-image: url(../img/reviews/review-arrow_prev.svg)
+
