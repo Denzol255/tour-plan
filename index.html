@@ -93,17 +93,17 @@
 				</div>
 			</div>
 			<div class="hotel-grid">
-				<div class="slider">
+				<div class="slider hotel__slider">
 					<!-- Slider main container -->
 					<div class="swiper-container">
 						<!-- Additional required wrapper -->
 						<div class="swiper-wrapper">
 							<!-- Slides -->
-							<div class="swiper-slide"><img src="img/hotel/Slide_1.jpg" alt="Слайд 1"></div>
-							<div class="swiper-slide"><img src="img/hotel/Slide_2.jpg" alt="Слайд 2"></div>
-							<div class="swiper-slide"><img src="img/hotel/Slide_3.jpg" alt="Слайд 3"></div>
-							<div class="swiper-slide"><img src="img/hotel/Slide_4.webp" alt="Слайд 4"></div>
-							<div class="swiper-slide"><img src="img/hotel/Slide_5.jpg" alt="Слайд 5"></div>
+							<div class="swiper-slide"><img class="swiper-image" src="img/hotel/Slide_1.jpg" alt="Слайд 1"></div>
+							<div class="swiper-slide"><img class="swiper-image" src="img/hotel/Slide_2.jpg" alt="Слайд 2"></div>
+							<div class="swiper-slide"><img class="swiper-image" src="img/hotel/Slide_3.jpg" alt="Слайд 3"></div>
+							<div class="swiper-slide"><img class="swiper-image" src="img/hotel/Slide_4.webp" alt="Слайд 4"></div>
+							<div class="swiper-slide"><img class="swiper-image" src="img/hotel/Slide_5.jpg" alt="Слайд 5"></div>
 						</div>
 					
 						<!-- If we need navigation buttons -->
@@ -147,8 +147,7 @@
 						<!-- /.booking__button -->
 					</div>
 					<!-- /.booking -->
-					<div class="map">
-						
+					<div class="map" id="map">
 					</div>
 				</div>
 				<!-- /.hotel-main -->
@@ -157,6 +156,7 @@
 		</div>
 	</section>
 	<script src="js/swiper-bundle.min.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>
