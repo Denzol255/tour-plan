@@ -14,6 +14,11 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+  color: #EC1F46;
+}
+
 a:focus,
 a:active {
   outline: none;
@@ -41,6 +46,13 @@ button {
 .container {
   max-width: 1110px;
   margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+  a:hover {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -456,6 +468,10 @@ template {
   border: none;
 }
 
+.search__button:hover {
+  background-color: #ff6d01;
+}
+
 .user {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -479,6 +495,10 @@ template {
   line-height: 18px;
   margin-left: 18px;
   color: #333333;
+}
+
+.user__name:hover {
+  color: #EC1F46;
 }
 
 .list {
@@ -761,6 +781,10 @@ template {
   color: inherit;
 }
 
+.booking-btn:hover {
+  background-color: #ff6d01;
+}
+
 .price {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -908,6 +932,10 @@ template {
   font-size: 12px;
   line-height: 15px;
   color: #FFFFFF;
+}
+
+.subscribe__button:hover {
+  background-color: #ff6d01;
 }
 
 .reviews {
@@ -1128,6 +1156,10 @@ template {
   padding: 7px 22px;
 }
 
+.card__button:hover {
+  background-color: #ff6d01;
+}
+
 .footer {
   background-color: #0A223D;
   color: #BDBDBD;
@@ -1332,6 +1364,10 @@ template {
   border-radius: 4px;
 }
 
+.footer__button:hover {
+  background-color: #ff6d01;
+}
+
 .footer__required {
   font-style: normal;
   font-weight: bold;
@@ -1361,6 +1397,10 @@ template {
       -ms-flex-align: center;
           align-items: center;
   min-width: 698px;
+}
+
+.footer__info {
+  color: #FFFFFF;
 }
 
 @media (max-width: 1200px) {
@@ -1413,6 +1453,12 @@ template {
   .search__input {
     width: 340px;
   }
+  .search__button:hover {
+    background-color: #EC1F46;
+  }
+  .user__name:hover {
+    color: #333333;
+  }
   .hotel {
     padding-bottom: 60px;
   }
@@ -1440,6 +1486,9 @@ template {
     -ms-flex-preferred-size: 48.5%;
         flex-basis: 48.5%;
   }
+  .booking-btn:hover {
+    background-color: #EC1F46;
+  }
   .map {
     -ms-flex-preferred-size: 48.5%;
         flex-basis: 48.5%;
@@ -1453,6 +1502,9 @@ template {
   .card {
     width: 340px;
     height: 255px;
+  }
+  .card__button:hover {
+    background-color: #EC1F46;
   }
   .footer-wrapper {
     -ms-grid-columns: (1fr)[6];
@@ -1502,6 +1554,12 @@ template {
   }
   .footer-bottom__wrapper {
     min-width: 100%;
+  }
+  .footer__button:hover {
+    background-color: #EC1F46;
+  }
+  .subscribe__button:hover {
+    background-color: #EC1F46;
   }
 }
 
