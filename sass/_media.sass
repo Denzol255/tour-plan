@@ -116,13 +116,52 @@
 	.container
 		max-width: 576px
 		width: 92%
+	body
+		padding-top: 78px
+	.scroll
+		&--lock
+			overflow: hidden
 	.navbar
-		&__search,
-		&__user,
-		&-menu
+		&__search, &__user
+			&--mobile
+				&--hidden
+					display: none
+				&--visible
+					display: flex
+		&__mobile
+			&--fixed
+				position: fixed
+				top: 0
+				left: 0
+				right: 0
+				z-index: 99
+		&__user
+			flex-direction: column
+			justify-content: center
+		&-bottom
 			display: none
+			position: fixed
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			top: 78px
+			padding-top: 30px
+			overflow: auto
+			&--active
+					display: block
+		&-menu
+			&__list
+				flex-direction: column
+	.list
+		&__item
+			margin-bottom: 20px
+			&--mobile
+				&--visible
+					display: block
 	.menu-button
 		display: flex
+		position: relative
 		width: 16px
 		height: 11px
 		align-items: center
@@ -133,6 +172,27 @@
 			width: 16px
 			height: 1px
 			background-color: $tc
+	.menu-button--active
+		.menu-button__line
+			&--1
+				transform: rotate(45deg)
+				position: absolute
+				top: 5px
+				transition: all 0.3s ease 0s
+			&--2
+				transform: scale(0)
+			&--3
+				&--1
+				transform: rotate(-45deg)
+				position: absolute
+				top: 5px
+				transition: all 0.3s ease 0s
+	.user
+		&__name
+			&--light
+				color: $light
+				margin-left: 0
+				margin-top: 10px
 	.hotel
 		padding-bottom: 50px
 		&-wrapper
@@ -209,6 +269,13 @@
 @media (max-width: 576px)
 	.logo
 		width: 99px
+	.list
+		&__item
+			&--2
+				width: 85%
+	.search
+		&__input
+			width: 100%
 	.hotel
 		padding: 10px 0 40px 0
 		&-slider

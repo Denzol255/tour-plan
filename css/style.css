@@ -432,6 +432,10 @@ template {
   padding: 31px 0px;
 }
 
+.navbar__search--mobile--hidden, .navbar__user--mobile--hidden {
+  display: none;
+}
+
 .logo {
   width: 177px;
 }
@@ -520,6 +524,10 @@ template {
   line-height: 18px;
   color: inherit;
   text-transform: uppercase;
+}
+
+.list__item--mobile--visible {
+  display: none;
 }
 
 .breadcrumb-list {
@@ -1568,13 +1576,67 @@ template {
     max-width: 576px;
     width: 92%;
   }
-  .navbar__search, .navbar__user, .navbar-menu {
+  body {
+    padding-top: 78px;
+  }
+  .scroll--lock {
+    overflow: hidden;
+  }
+  .navbar__search--mobile--hidden, .navbar__user--mobile--hidden {
     display: none;
+  }
+  .navbar__search--mobile--visible, .navbar__user--mobile--visible {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navbar__mobile--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  .navbar__user {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .navbar-bottom {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 78px;
+    padding-top: 30px;
+    overflow: auto;
+  }
+  .navbar-bottom--active {
+    display: block;
+  }
+  .navbar-menu__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .list__item {
+    margin-bottom: 20px;
+  }
+  .list__item--mobile--visible {
+    display: block;
   }
   .menu-button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    position: relative;
     width: 16px;
     height: 11px;
     -webkit-box-align: center;
@@ -1593,6 +1655,31 @@ template {
     width: 16px;
     height: 1px;
     background-color: #333333;
+  }
+  .menu-button--active .menu-button__line--1 {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    position: absolute;
+    top: 5px;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  .menu-button--active .menu-button__line--2 {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  .menu-button--active .menu-button__line--3 {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    position: absolute;
+    top: 5px;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  .user__name--light {
+    color: #FFFFFF;
+    margin-left: 0;
+    margin-top: 10px;
   }
   .hotel {
     padding-bottom: 50px;
@@ -1716,6 +1803,12 @@ template {
 @media (max-width: 576px) {
   .logo {
     width: 99px;
+  }
+  .list__item--2 {
+    width: 85%;
+  }
+  .search__input {
+    width: 100%;
   }
   .hotel {
     padding: 10px 0 40px 0;

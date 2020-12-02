@@ -15,27 +15,27 @@
 </head>
 
 <body>
-	<header class="navbar">
+	<header class="navbar navbar__mobile--fixed">
 		<div class="container">
 			<div class="navbar-top">
 				<a href="#" class="logo">
 					<img src="img/header/horizontal-logo.svg" alt="Logo: Best Tour Plan" class="logo__image">
 				</a>
-				<form action="#" class="search navbar__search">
+				<form action="#" class="search navbar__search navbar__search--mobile--hidden">
 					<input type="text" class="search__input" placeholder="Search Location">
 					<button class="search__button">
 						<img src="img/header/search.svg" alt="Icon: search">
 					</button>
 				</form>
-				<a href="#" class="user navbar__user">
+				<a href="#" class="user navbar__user navbar__user--mobile--hidden">
 					<img src="img/header/user-avatar.jpg" alt="Avatar: Nathan" class="user__avatar">
 					<span class="user__name">Nathan</span>
 				</a>
 				<!-- /.user -->
 				<button class="navbar-top__menu-button menu-button">
-					<span class="menu-button__line"></span>
-					<span class="menu-button__line"></span>
-					<span class="menu-button__line"></span>
+					<span class="menu-button__line menu-button__line--1"></span>
+					<span class="menu-button__line menu-button__line--2"></span>
+					<span class="menu-button__line menu-button__line--3"></span>
 				</button>
 			</div>
 			<!-- /.header-wrapper -->
@@ -45,6 +45,20 @@
 			<div class="container">
 				<nav class="navbar-menu">
 					<ul class="navbar-menu__list list">
+						<li class="list__item list__item--1 list__item--mobile--visible">
+							<a href="#" class="user navbar__user navbar__user--mobile--visible">
+							<img src="img/header/user-avatar.jpg" alt="Avatar: Nathan" class="user__avatar">
+							<span class="user__name user__name--light">Nathan</span>
+						</a>
+						</li>
+						<li class="list__item list__item--2 list__item--mobile--visible">
+							<form action="#" class="search navbar__search navbar__search--mobile--visible">
+								<input type="text" class="search__input" placeholder="Search Location">
+								<button class="search__button">
+									<img src="img/header/search.svg" alt="Icon: search">
+								</button>
+							</form>
+						</li>
 						<li class="list__item"><a href="#" class="list__link">All Deals</a></li>
 						<li class="list__item"><a href="#" class="list__link">Hotels</a></li>
 						<li class="list__item"><a href="#" class="list__link">Activities</a></li>

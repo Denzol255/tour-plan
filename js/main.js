@@ -71,3 +71,11 @@ function init() {
   myMap.geoObjects
     .add(myGeoObject);
 }
+
+var menuButton = document.querySelector(".menu-button")
+menuButton.addEventListener("click", function() {
+  console.log("Кнопка нажата");
+  document.querySelector(".navbar-bottom").classList.toggle('navbar-bottom--active')
+  document.querySelector(".menu-button").classList.toggle('menu-button--active')
+   document.querySelector("body").classList.toggle('scroll--lock')
+})
