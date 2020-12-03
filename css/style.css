@@ -1339,7 +1339,7 @@ template {
       flex-basis: 100%;
   margin-bottom: 23px;
   resize: none;
-  max-height: 123px;
+  height: 123px;
 }
 
 .footer__textarea:focus {
