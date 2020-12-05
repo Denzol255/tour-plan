@@ -48,6 +48,55 @@ button {
   margin: 0 auto;
 }
 
+.input {
+  background-color: #FFFFFF;
+  min-height: 50px;
+  padding: 0 23px 0 23px;
+  border-radius: 4px;
+}
+
+.message {
+  background-color: #FFFFFF;
+  padding: 18px 23px;
+  border-radius: 4px;
+  resize: none;
+  min-height: 123px;
+}
+
+.button {
+  min-width: 160px;
+  min-height: 50px;
+  padding: 18px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FFFFFF;
+  background-color: #EC1F46;
+  border-radius: 4px;
+}
+
+.required {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #E0E0E0;
+}
+
+.send-block {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 @media (max-width: 992px) {
   a:hover {
     color: inherit;
@@ -1322,66 +1371,23 @@ template {
 }
 
 .footer__input {
-  background-color: #FFFFFF;
-  min-height: 50px;
-  padding: 0 23px 0 23px;
-  border-radius: 4px;
   margin-bottom: 15px;
   -ms-flex-preferred-size: 47%;
       flex-basis: 47%;
 }
 
 .footer__textarea {
-  background-color: #FFFFFF;
-  padding: 18px 23px;
-  border-radius: 4px;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   margin-bottom: 23px;
-  resize: none;
-  height: 123px;
 }
 
 .footer__textarea:focus {
   outline: none;
 }
 
-.footer__block-send {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.footer__button {
-  min-width: 160px;
-  min-height: 50px;
-  padding: 18px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  color: #FFFFFF;
-  background-color: #EC1F46;
-  border-radius: 4px;
-}
-
 .footer__button:hover {
   background-color: #ff6d01;
-}
-
-.footer__required {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  color: #E0E0E0;
 }
 
 .footer-bottom {
@@ -1409,6 +1415,73 @@ template {
 
 .footer__info {
   color: #FFFFFF;
+}
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 143, 223, 0.39);
+  z-index: 5;
+}
+
+.modal__dialog {
+  position: fixed;
+  max-width: 478px;
+  top: 50%;
+  left: 50%;
+  padding: 33px 88px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 6;
+  background-color: #0A223D;
+  color: #FFFFFF;
+  border-radius: 8px;
+}
+
+.modal__close {
+  position: absolute;
+  top: 17px;
+  right: 18px;
+}
+
+.modal__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.modal__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.modal__input {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.modal__textarea {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.modal__button {
+  margin-right: 45px;
 }
 
 @media (max-width: 1200px) {
@@ -1568,6 +1641,28 @@ template {
   }
   .subscribe__button:hover {
     background-color: #EC1F46;
+  }
+  .modal__dialog {
+    padding: 33px 66px;
+  }
+  .modal__block-send {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .modal__button {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 15px;
+  }
+  .modal__required {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
   }
 }
 
@@ -1798,6 +1893,9 @@ template {
   .footer__logo {
     width: 104px;
   }
+  .modal__dialog {
+    padding: 33px 44px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1950,5 +2048,9 @@ template {
   }
   .footer__info {
     margin-bottom: 10px;
+  }
+  .modal__dialog {
+    width: 92%;
+    padding: 15px 22px;
   }
 }

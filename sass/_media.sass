@@ -112,6 +112,18 @@
 		&__button
 			&:hover
 				background-color: $bc
+	.modal
+		&__dialog
+			padding: 33px 66px
+		&__block-send
+			flex-direction: column
+			align-items: flex-start
+		&__button
+			width: 100%
+			margin-right: 0
+			margin-top: 15px
+		&__required
+			order: -1
 @media (max-width: 768px)
 	.container
 		max-width: 576px
@@ -266,6 +278,9 @@
 			flex-basis: 100%
 		&__logo
 			width: 104px
+	.modal
+		&__dialog
+			padding: 33px 44px
 @media (max-width: 576px)
 	.logo
 		width: 99px
@@ -362,6 +377,10 @@
 				align-items: flex-start
 		&__info
 			margin-bottom: 10px
+	.modal
+		&__dialog
+			width: 92%
+			padding: 15px 22px
 
 		
 
