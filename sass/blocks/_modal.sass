@@ -7,6 +7,12 @@
 		bottom: 0
 		background-color: rgba(0, 143, 223, 0.39);
 		z-index: 5
+		visibility: hidden
+		opacity: 0
+		transition: opacity 0.3s
+		&--visible
+			visibility: visible
+			opacity: 1
 	&__dialog
 		position: fixed
 		max-width: 478px
@@ -18,6 +24,12 @@
 		background-color: $dark
 		color: $light
 		border-radius: 8px
+		visibility: hidden
+		opacity: 0
+		transition: opacity 0.3s
+		&--visible
+			visibility: visible
+			opacity: 1
 	&__close
 		position: absolute
 		top: 17px
