@@ -90,6 +90,7 @@ $(document).ready(function () {
 
   function closeModal(event) {
     event.preventDefault();
+     document.querySelector("body").classList.remove("scroll--lock");
     var modalOverlay = $(".modal__overlay");
     var modalDialog = $(".modal__dialog");
     modalOverlay.removeClass("modal__overlay--visible");
@@ -97,6 +98,7 @@ $(document).ready(function () {
   }
 
   function openModal() {
+    document.querySelector("body").classList.add("scroll--lock");
     var modalOverlay = $(".modal__overlay");
     var modalDialog = $(".modal__dialog");
     modalOverlay.addClass('modal__overlay--visible');
