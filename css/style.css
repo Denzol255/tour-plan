@@ -101,6 +101,10 @@ button {
           align-items: center;
 }
 
+.invalid {
+  color: #EC1F46;
+}
+
 @media (max-width: 992px) {
   a:hover {
     color: inherit;
@@ -1376,6 +1380,11 @@ template {
 }
 
 .footer__input {
+  width: 100%;
+}
+
+.footer__input-group {
+  min-height: 70px;
   margin-bottom: 15px;
   -ms-flex-preferred-size: 47%;
       flex-basis: 47%;
@@ -1497,11 +1506,16 @@ template {
 
 .modal__input {
   width: 100%;
-  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.modal__input:first-child {
+  margin-top: 0;
 }
 
 .modal__textarea {
   width: 100%;
+  margin-top: 15px;
   margin-bottom: 15px;
 }
 
@@ -1667,7 +1681,7 @@ template {
     grid-row: 4;
     grid-column: span 14;
   }
-  .footer__input {
+  .footer__input-group {
     -ms-flex-preferred-size: 47%;
         flex-basis: 47%;
   }
@@ -1961,7 +1975,7 @@ template {
     grid-row: 4;
     grid-column: span 5;
   }
-  .footer__input {
+  .footer__input-group {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
@@ -2139,6 +2153,5 @@ template {
   .modal__dialog {
     width: 92%;
     padding: 15px 22px;
-    margin-top: 20px;
   }
 }

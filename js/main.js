@@ -38,15 +38,15 @@ $(document).ready(function () {
   ymaps.ready(init);
   function init() {
     var myMap = new ymaps.Map(
-      "map",
-      {
-        center: [7.838196, 98.298813],
-        zoom: 17,
-      },
-      {
-        searchControlProvider: "yandex#search",
-      }
-    ),
+        "map",
+        {
+          center: [7.838196, 98.298813],
+          zoom: 17,
+        },
+        {
+          searchControlProvider: "yandex#search",
+        }
+      ),
       // Создаем геообъект с типом геометрии "Точка".
       myGeoObject = new ymaps.GeoObject(
         {
@@ -83,14 +83,14 @@ $(document).ready(function () {
     document.querySelector("body").classList.toggle("scroll--lock");
   });
 
-  var modalButton = $('[data-toggle=modal]');
+  var modalButton = $("[data-toggle=modal]");
   var closeModalButton = $(".modal__close");
-  modalButton.on('click', openModal);
-  closeModalButton.on('click', closeModal)
+  modalButton.on("click", openModal);
+  closeModalButton.on("click", closeModal);
 
   function closeModal(event) {
     event.preventDefault();
-     document.querySelector("body").classList.remove("scroll--lock");
+    document.querySelector("body").classList.remove("scroll--lock");
     var modalOverlay = $(".modal__overlay");
     var modalDialog = $(".modal__dialog");
     modalOverlay.removeClass("modal__overlay--visible");
@@ -101,7 +101,29 @@ $(document).ready(function () {
     document.querySelector("body").classList.add("scroll--lock");
     var modalOverlay = $(".modal__overlay");
     var modalDialog = $(".modal__dialog");
-    modalOverlay.addClass('modal__overlay--visible');
+    modalOverlay.addClass("modal__overlay--visible");
     modalDialog.addClass("modal__dialog--visible");
   }
+
+  // Обработка форм
+
+  $(".form").each(function(){
+    $(this).validate({
+      errorClass: "invalid",
+      messages: {
+        name: {
+          required: "Please specify your name",
+          minlength: "Name must be at least 3 letters",
+        },
+        email: {
+          required: "We need your email address to contact you",
+          email: "Your email address must be in the format of name@domain.com",
+        },
+        phone: {
+          required: "Please specify your phone",
+        },
+      },
+    });
+  })
+   $(".phone-input").mask("+7 (999) 999-99-99");
 });
