@@ -11,6 +11,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Nunito:wght@400;700;800&display=swap"
 		rel="stylesheet">
 	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/aos.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -18,7 +19,7 @@
 	<header class="navbar navbar__mobile--fixed">
 		<div class="container">
 			<div class="navbar-top">
-				<a href="#" class="logo">
+				<a href="#" class="logo" data-aos="fade-right">
 					<img src="img/header/horizontal-logo.svg" alt="Logo: Best Tour Plan" class="logo__image">
 				</a>
 				<form action="#" class="search navbar__search navbar__search--mobile--hidden">
@@ -177,10 +178,10 @@
 	</section>
 	<section class="newsletter">
 		<div class="newsletter-wrapper">
-			<h2 class="newsletter__title">subscribe to our
+			<h2 class="newsletter__title" data-aos="fade-left" data-aos-delay="100">subscribe to our
 				<span class="newsletter__strong">Newsletter</span>
 			</h2>
-			<form action="#" class="subscribe newsletter__search form">
+			<form action="#" class="subscribe newsletter__search form" data-aos="fade-left" data-aos-delay="300">
 				<input type="email" class="subscribe__input" placeholder="Your email address">
 				<button class="subscribe__button">Send</button>
 			</form>
@@ -300,23 +301,23 @@
 		<div class="container">
 			<h2 class="activities__title">Other Activities</h2>
 			<div class="activities-wrapper">
-				<div class="card activities__card">
+				<div class="card activities__card" data-aos="fade-up" data-aos-delay="100">
 					<img src="img/activities/activities-1.jpg" alt="The curious corner
 						of chamarel" class="card__image">
 					<h3 class="card__title">The curious corner <br> of chamarel</h3>
 					<button class="card__button">Book Now</button>
 				</div>
-				<div class="card activities__card">
+				<div class="card activities__card" data-aos="fade-up" data-aos-delay="300">
 					<img src="img/activities/activities-2.jpg" alt="Gymkhana club golf course" class="card__image">
 					<h3 class="card__title">Gymkhana club golf <br> course</h3>
 					<button class="card__button">Book Now</button>
 				</div>
-				<div class="card activities__card">
+				<div class="card activities__card" data-aos="fade-up" data-aos-delay="500">
 					<img src="img/activities/activities-3.jpg" alt="Tamarind falls hiking trip - full day" class="card__image">
 					<h3 class="card__title">Tamarind falls hiking <br> trip - full day</h3>
 					<button class="card__button">Book Now</button>
 				</div>
-				<div class="card activities__card">
+				<div class="card activities__card" data-aos="fade-up" data-aos-delay="700">
 					<img src="img/activities/activities-4.jpg" alt="The blue marine discovery quest" class="card__image">
 					<h3 class="card__title">The blue marine discovery <br> quest</h3>
 					<button class="card__button">Book Now</button>
@@ -327,7 +328,7 @@
 	<footer class="footer">
 		<div class="container">
 			<div class="footer-wrapper footer-wrapper__mb-9">
-				<img src="img/footer/vertical-logo.svg" alt="Icon: Logo" class="footer__logo">
+				<img src="img/footer/vertical-logo.svg" alt="Icon: Logo" class="footer__logo" data-aos="zoom-in">
 				<div class="footer__list footer__categories">
 					<h3 class="footer__title">all categories</h3>
 					<ul class="footer__ul">
@@ -508,6 +509,7 @@
 	<script src="js/swiper-bundle.min.js"></script>
 	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/jquery.mask.min.js"></script>
+	<script src="js/aos.js"></script>
 	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey"></script>
 	<script src="js/main.js"></script>
 </body>
