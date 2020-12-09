@@ -78,10 +78,18 @@
 		flex-wrap: wrap
 	&__input
 		width: 100%
-		&-group
-			min-height: 70px
+		&-block
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+			width: 100%
 			margin-bottom: 15px
+		&-group
+			max-width: 255px
+			min-height: 70px
+			position: relative
 			flex-basis: 47%
+			&:last-child
 	&__textarea
 		flex-basis: 100%
 		margin-bottom: 23px

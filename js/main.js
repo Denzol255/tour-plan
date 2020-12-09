@@ -117,13 +117,22 @@ $(document).ready(function () {
         },
         email: {
           required: "We need your email address to contact you",
-          email: "Your email address must be in the format of name@domain.com",
+          email: "Email format - name@domain.com",
+        },
+        newsletterEmail: {
+          required: "We need your email address to contact you",
+          email: "Email format - name@domain.com",
         },
         phone: {
-          required: "Please specify your phone",
+          required: "Please specify your phone number",
+          minlength: "Please specify your full phone number",
         },
       },
     });
   })
    $(".phone-input").mask("+7 (999) 999-99-99");
+   AOS.init();
+   AOS.init({
+     once: true,
+   });
 });
