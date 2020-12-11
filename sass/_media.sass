@@ -47,7 +47,7 @@
 			&:hover
 				color: $tc
 	.hotel
-		padding-bottom: 60px
+		padding-bottom: 48px
 		&-grid
 			flex-direction: column
 		&-main
@@ -73,7 +73,8 @@
 			&__item
 				max-width: 580px
 	.activities
-		padding-bottom: 16px
+		padding-top: 50px
+		padding-bottom: 49px
 		&__card
 			margin-bottom: 20px
 	.card
@@ -88,6 +89,8 @@
 			grid-template-columns: repeat(18, 1fr)
 			grid-row-gap: 40px
 			grid-column-gap: 40px
+			&__mb-9
+				margin-bottom: 77px
 		&__logo
 			grid-row: 1 / 2
 			grid-column: span 5
@@ -317,6 +320,9 @@
 		&__dialog
 			padding: 33px 30px
 @media (max-width: 576px)
+	.navbar
+		&-top
+			padding: 24px 6px 
 	.logo
 		width: 99px
 	.list
@@ -326,20 +332,31 @@
 	.search
 		&__input
 			width: 100%
+	.breadcrumb
+		&-list
+			padding: 11px 7px
 	.hotel
-		padding: 10px 0 40px 0
+		padding: 10px 0 39px 10px
 		&-slider
 			height: 179px
+			&__button
+				display: none
+		&-info
+			&__description
+				margin-bottom: 13px
 		&__slider
 			margin-bottom: 20px
+		&__stars
+			margin-right: 20px
 	.booking
 		margin-bottom: 20px
+		padding-left: 20px
 		&-btn
 			width: 100%
 	.ymap-container
 		height: 172px
 	.newsletter
-		padding: 76px 0 83px 0
+		padding: 76px 5px 66px 5px
 		&__title
 			font-size: 20px
 			line-height: 25px
@@ -350,7 +367,7 @@
 	.subscribe
 		width: 100%
 	.reviews
-		padding-bottom: 50px
+		padding-bottom: 71px
 		&__title
 			max-width: 245px
 			margin-right: auto
@@ -374,14 +391,17 @@
 		&:last-child
 			margin-bottom: 0
 	.footer
-		padding-top: 69px
+		padding-top: 77px
 		padding-bottom: 21px
-		&__title--inline
-			margin-right: 0
-			margin-bottom: 20px
+		&__title
+			&--inline
+				margin-right: 0
+				margin-bottom: 20px
+			&--mb-4
+				margin-bottom: 15px
 		&-wrapper
 			grid-template-columns: 1fr
-			grid-row-gap: 20px
+			grid-row-gap: 30px
 			&__mb-9
 				margin-bottom: 30px 
 		&__logo
@@ -401,10 +421,12 @@
 		&__categories
 			grid-row: 5
 			grid-column: 1
+			margin-bottom: 15px
 		&__contact
 			&-details
 				grid-row: 6
 				grid-column: 1
+				margin-bottom: 5px
 			&-form
 				grid-row: 7
 				grid-column: 1
@@ -415,6 +437,8 @@
 		&__required
 			order: -1
 			margin-bottom: 15px
+		&__textarea
+			margin-bottom: 9px
 		&__button
 			width: 56%
 		&-bottom
