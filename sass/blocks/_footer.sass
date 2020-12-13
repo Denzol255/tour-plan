@@ -18,6 +18,8 @@
 		align-self: center
 	&__categories
 		grid-row: 1 / 4
+	&__legal
+		justify-self: self-end
 	&__social
 		&-network
 			display: flex
@@ -58,6 +60,12 @@
 		&--mb-2
 			margin-bottom: 20px
 	&__icon
+		&--1
+			margin-top: 1px
+			margin-left: 4px
+		&--3
+			margin-top: 4px
+			margin-left: 4px
 		&-wrapper
 			min-width: 40px
 	&__link
@@ -88,12 +96,16 @@
 			flex-wrap: wrap
 			width: 100%
 		&-group
+			font-size: 12px
+			line-height: 15px
 			max-width: 255px
 			min-height: 70px
 			position: relative
 			flex-basis: 47%
 			&:last-child
 	&__textarea
+		font-size: 12px
+		line-height: 15px
 		flex-basis: 100%
 		margin-bottom: 23px
 		&:focus
